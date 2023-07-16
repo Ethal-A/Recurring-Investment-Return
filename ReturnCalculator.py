@@ -98,8 +98,7 @@ for i in range(len(intervals)):
 
 # Print final results.
 print('''
-Began buying {symbol} stock on {start_date} with an interval of {interval} days per investment of {amount}.
-Sold all stock on {end_date} for a price of {last_price}.
+Began buying {symbol} stock on {start_date} with an interval of {interval} days per investment of {amount} and sold all stock on {end_date} for a price of {last_price}
 Amount of money that was not invested (cannot buy portion of a stock in this model): {not_invested}
 Amount of money that was invested: {invested}
 The total value of all investments: {portfolio_value}

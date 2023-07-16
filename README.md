@@ -70,8 +70,7 @@ On 2023-03-07 bought 10 of VGS.AX at $98.37, investing $983.65
 On 2023-04-18 bought 9 of VGS.AX at $100.67, investing $906.03
 On 2023-05-29 bought 9 of VGS.AX at $104.37, investing $939.33
 
-Began buying VGS.AX stock on 2018-07-16 with an interval of 28 days per investment of $1,000.00.
-Sold all stock on 2023-07-07 for a price of $105.02.
+Began buying VGS.AX stock on 2018-07-16 with an interval of 28 days per investment of $1,000.00 and sold all stock on 2023-07-07 for a price of $105.02
 Amount of money that was not invested (cannot buy portion of a stock in this model): $2,273.28
 Amount of money that was invested: $42,726.72
 The total value of all investments: $53,455.18

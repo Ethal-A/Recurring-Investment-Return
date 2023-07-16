@@ -11,13 +11,13 @@ To use ReturnCalculator.py use python to run the script via `python ReturnCalcul
 ```
   -h, --help            show this help message and exit
   --period PERIOD, -p PERIOD
-                        Period of recurring investment. Valid values: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max
+                        Period of recurring investment with valid values being: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd and max
   --interval INTERVAL, -i INTERVAL
                         Days between recurring investment
   --symbol SYMBOL, -s SYMBOL
-                        The stock symbol.
+                        The stock symbol
   --amount AMOUNT, -a AMOUNT
-                        The amount of money to be invested each interval.
+                        The amount of money to be invested each interval
 ```
 
 ## Example

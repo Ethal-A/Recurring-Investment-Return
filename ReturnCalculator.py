@@ -16,10 +16,10 @@ def parse_arguments(defaults: dict) -> argparse.Namespace:
                                      - amount: {amount}'''.format(symbol=defaults['symbol'], period=defaults['period'], amount=defaults['amount'], interval=defaults['interval']))
     
     # Define the arguments and their data types
-    parser.add_argument('--period', '-p', type=str, help='Period of recurring investment. Valid values: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max')
+    parser.add_argument('--period', '-p', type=str, help='Period of recurring investment with valid values being: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd and max')
     parser.add_argument('--interval', '-i', type=int, help='Days between recurring investment')
-    parser.add_argument('--symbol', '-s', type=str, help='The stock symbol.')
-    parser.add_argument('--amount', '-a', type=float, help='The amount of money to be invested each interval.')
+    parser.add_argument('--symbol', '-s', type=str, help='The stock symbol')
+    parser.add_argument('--amount', '-a', type=float, help='The amount of money to be invested each interval')
 
     # Parse the arguments from the command line
     args = parser.parse_args()

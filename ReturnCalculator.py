@@ -4,6 +4,43 @@
 
 import yfinance as yf
 import datetime
+import argparse
+
+# Get user values
+def parse_arguments(defaults: dict) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description='''A script used to calculate the return on investment from recurring investment into a single stock over a period of time.
+                                     The script uses Yahoo Finance statistics and will provide a return on investment from the period provided to the latest Yahoo Finance statistics on that stock
+                                     The currency is determined by the exchange of the symbol provided. For example, VAS.AX is Vanguard Australian Shares in the Australian Stock Exchange and will therefore use Australian Dollars.
+                                     The program has key limitations in that it does not account for dividends. Stock splits within the period specified are not accounted for.
+                                     Default values:
+                                     - symbol: {symbol}
+                                     - period: {period}
+                                     - interval: {interval}
+                                     - amount: {amount}'''.format(symbol=defaults['symbol'], period=defaults['period'], amount=defaults['amount'], interval=defaults['interval']))
+    
+    # Define the arguments and their data types
+    parser.add_argument('--period', '-p', type=str, help='Period of recurring investment. Valid values: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max')
+    parser.add_argument('--interval', '-i', type=int, help='Days between recurring investment')
+    parser.add_argument('--symbol', '-s', type=str, help='The stock symbol.')
+    parser.add_argument('--amount', '-a', type=float, help='The amount of money to be invested each interval.')
+
+    # Parse the arguments from the command line
+    args = parser.parse_args()
+    return args
+
+# Get user arguments
+defaults = {
+    'symbol': 'VGS.AX',
+    'period': '5y',
+    'interval': 28,
+    'amount': 1000
+}
+args = parse_arguments(defaults)
+symbol = args.symbol or defaults['symbol']
+period = args.period or defaults['period']
+interval = args.interval or defaults['interval']
+amount = args.amount or defaults['amount']
+
 
 # Define functions for later
 def format_dollar(dol: float) -> str:
@@ -25,12 +62,6 @@ def print_purchase(date: datetime.date, symbol: str, price: float, quantity: int
         symbol=symbol,
         price=price,
         value=value))
-
-# Input parameters
-symbol = 'VGS.AX'
-period = '5y'
-interval = 28 # Days
-amount = 1000 # Amount to be invested per interval
 
 # Get symbol data
 hist = yf.Ticker(symbol).history(period)            # Retrieves pd.DataFrame

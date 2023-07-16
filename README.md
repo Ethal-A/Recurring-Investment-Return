@@ -2,7 +2,7 @@
 **This program is not meant to be, nor should be used as financial/investing advice.** This program is also not entirely accurate being unable to account for dividends, stock splits and more. The program cannot retrieve the latest data on stock prices either.
 
 # Recurring Investment Return
-Ever wondered, what would my return be over the course of Y years I invested X amount every Z days?
+Ever wondered, what would my return be over the course of Y years if I invested X amount every Z days?
 
 The following Python Script is used to calculate the return on investment from recurring investments into a single stock over a period of time. The script uses Yahoo Finance statistics and will provide a return on investment from the period provided to the latest Yahoo Finance statistics on that stock. The currency is determined by the exchange of the symbol provided. For example, VAS.AX is Vanguard Australian Shares in the Australian Stock Exchange and will therefore use Australian Dollars. The program has key limitations in that it does not account for dividends. Stock splits within the period specified are not accounted for.
 

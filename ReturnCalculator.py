@@ -90,7 +90,7 @@ for i in range(len(intervals)):
     quantity = int(amount // price)                                     # Quantity of stock to be purchased (rounded to negative infinity)
     invested += quantity * price                                        # Amount that was invested
     not_invested += amount - quantity * price                           # Amount that was not invested
-    sale_value = quantity * price * (1 + (last_price - price)/price)    # Value of purchase upon sale at the end of the period provided.
+    sale_value = quantity * price * (1 + (last_price - price)/price)    # Value of purchase upon sale at the end of the period provided
     portfolio_value += sale_value                                       # The value of the portfolio at the end
     portfolio_gain += sale_value - quantity * price                     # The amount gained in value at the end
 
